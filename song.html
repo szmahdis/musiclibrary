@@ -6,21 +6,42 @@
 		<style type="text/css">
 			
 		</style>
-		<script type="text/javascript">
-			
-		</script>
 	</head>
 
 	<body>
-        <button>Return</button>
+        <button onclick="window.location.href='file:///D:/Users/Mahdis/Projects/musiclibrary/main.html'" >Return</button>
         <center>
-            <img src="paramore.jpg" alt="Paramore" style="width:600px;height:600px;">
-            <p style="font-size:30px;"  style="text-align:center"> Paramore - Ain't It Fun </p>
+            <img id="coverAlbum" alt="Paramore" style="width:600px;height:600px;">
+            <p id="songTitle" style="font-size:30px;"  style="text-align:center"> ? </p>
             <button>Add to Favourites</button>
             <button>Previous</button>
             <button>Play</button>
             <button>Pause</button>
             <button>Next</button>
         </center>
+
+        <script type="text/javascript">
+			const songs = { //dictonary 
+                'aint-it-fun': 'Paramore - Ain\'t It Fun',
+                'dog-days-are-over': 'Florence + The Machine - Dog Days Are Over',
+                'wasting-my-young-years': 'London Grammar - Wasting My Young Years'
+            };
+            const covers = {
+                'aint-it-fun': 'images/paramore.jpg',
+                'dog-days-are-over': 'images/florence_and_the_machine.jpg',
+                'wasting-my-young-years': 'images/london_grammar.jpg'
+            }
+            getSongName = () => {
+                const url= window.location.href
+                const song = url.split('?')
+                const songName = song[1].split('=')[1]
+                return songName;
+            };
+            document.getElementById('coverAlbum').setAttribute("src", covers[getSongName()]);
+            const songTitle = songs[getSongName()];
+            document.getElementById('songTitle').textContent = songTitle;
+            console.log(songTitle);
+            
+		</script>
 	</body>
 </html>
