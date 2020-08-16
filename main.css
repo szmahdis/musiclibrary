@@ -1,0 +1,66 @@
+body {
+    background: #131417;
+    /* background: #1f2229; */
+    /* background-color: cyan; */
+}
+
+.header{
+    color:whitesmoke;
+}
+.header:hover{
+    /* color: #3498db */
+    color:#ffdd40;
+}
+
+.list-container .row {
+    display: grid;
+    grid-template-columns: 100px 100px 100px 100px 100px;
+    column-gap: 10px;
+    align-items: center;
+    justify-items: center;
+}
+.list-container .row * {
+    margin: 5px;
+}
+.list-container .row *:first-child {
+    margin-left: 0;
+}
+.list-container .row *:last-child {
+    margin-right: 0;
+}
+
+.list-container .row button {
+	width:60px;
+	height:60px;
+	padding-left: 10px;
+	border: 6px solid #fff;
+	border-radius: 50%;
+	color:#f5f5f5;
+	text-align:center;
+	text-decoration:none;
+	background-color: rgba(0,0,0,0.5);
+	font-size:13px;
+	transition: all 0.3s ease;
+}
+.list-container .row button:hover {
+	background-color: rgba(0,0,0,0.8);
+	box-shadow: 0px 0px 10px #ffdd40;
+	text-shadow: 0px 0px 10px #ffdd40;
+}
+
+.list-container .header {
+    font-weight: bold;
+    color: white;
+    border-bottom:4px solid #ffdd40;
+}
+
+.list-container .song.row {
+     background: #1f2229;
+     color:white
+}
+
+.cover-img {
+    object-fit:cover;
+    width: 100%;
+    max-height: 100%;
+}
