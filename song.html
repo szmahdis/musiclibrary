@@ -10,7 +10,7 @@
 
 	<body>
         <!-- root / -->
-        <button onclick="window.location.href='/'" >Return</button> 
+        <button onclick="window.location.href='./index.html'" >Return</button> 
         <center>
             <img id="coverAlbum" alt="Paramore" style="width:600px;height:600px;">
             <p id="songTitle" style="font-size:30px;"  style="text-align:center"> ? </p>
@@ -28,9 +28,9 @@
                 'wasting-my-young-years': 'London Grammar - Wasting My Young Years'
             };
             const covers = {
-                'aint-it-fun': '/images/paramore.jpg',
-                'dog-days-are-over': '/images/florence_and_the_machine.jpg',
-                'wasting-my-young-years': '/images/london_grammar.jpg'
+                'aint-it-fun': './images/paramore.jpg',
+                'dog-days-are-over': './images/florence_and_the_machine.jpg',
+                'wasting-my-young-years': './images/london_grammar.jpg'
             }
             getSongName = () => {
                 const url= window.location.href
