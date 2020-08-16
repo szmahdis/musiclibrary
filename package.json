@@ -1,0 +1,20 @@
+{
+  "name": "musiclibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel ./*html",
+    "build": "parcel ./*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szmahdis/musiclibrary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szmahdis/musiclibrary/issues"
+  },
+  "homepage": "https://github.com/szmahdis/musiclibrary#readme"
+}

@@ -85,34 +85,6 @@
 
 		</div>
 
-		<script type="text/javascript">
-			const playButtons = document.getElementsByTagName('button')
-
-			for(playButton of playButtons) {
-				const songName = playButton.getAttribute("data-song")
-				playButton.onclick = () => {
-			 	window.location.href=`./song.html?song=${songName}`;
-				}
-			}
-		</script>
+		<script src="./index.js"></script>
 	</body>
 </html>
-
-<!-- query parameters ? 
-file:///D:/Users/Mahdis/Projects/musiclibrary/song.html?song=${songName} -->
-
-
-
-
-
-
-
-
-
-<!-- 
-/* <ul style="padding:0; margin:0;" > 
-	<li> <a href="https://www.w3schools.com/html/"> Ain't It Fun - Paramore </a> </li>
-	<li> <a href="https://www.w3schools.com/html/"> Dog Days Are Over - Florence + The Machine </a> </li>
-	<li> <a href="https://www.w3schools.com/html/"> Wasting My Young Years - London Grammar </a> </li>
-  </ul>
-*/ -->
