@@ -3,24 +3,25 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>My Music Library</title>
-		<style type="text/css">
-			
-		</style>
+		<link rel="stylesheet" href="song.css">
+        <link rel="stylesheet" href="./font-awesome/css/all.min.css">
 	</head>
 
 	<body>
-        <!-- root / -->
-        <button onclick="window.location.href='./main.html'" >Return</button> 
-        <center>
-            <img id="coverAlbum" alt="CoverAbum" style="width:600px;height:600px;">
-            <p id="songTitle" style="font-size:30px;"  style="text-align:center"> ? </p>
-            <button>Add to Favourites</button>
-            <button>Previous</button>
-            <button>Play</button>
-            <button>Pause</button>
-            <button>Next</button>
-        </center>
-
-        <script src="./song.js"></script>
+        <header >
+        <button class="home-btn" onclick="window.location.href='./main.html'" ><i class="fas fa-home"></i></button> 
+        </header>
+        <div class="container">
+            <img class=image id="coverAlbum" alt="coverAlbum">
+            <p id="songTitle"> ? </p>
+            <div class="action-bar">
+            <button class="fav-btn"><i class="fas fa-heart"></i></button>
+            <button class="back-btn"><i class="fas fa-backward"></i></button>
+            <button class="play-btn"><i class="fas fa-play"></i></button>
+            <button class="pause-btn"><i class="fas fa-pause"></i></i></button>
+            <button class="forward-btn"><i class="fas fa-forward"></i></button>
+            </div>
+        </div>
+     <script src="./song.js"></script>
 	</body>
 </html>

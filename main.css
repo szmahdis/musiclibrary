@@ -1,14 +1,11 @@
 body {
     background: #131417;
-    /* background: #1f2229; */
-    /* background-color: cyan; */
 }
 
 .header{
     color:whitesmoke;
 }
 .header:hover{
-    /* color: #3498db */
     color:#ffdd40;
 }
 
