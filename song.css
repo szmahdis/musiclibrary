@@ -13,8 +13,7 @@ body {
     background: #1f2229;
     font-size: 28px;
     color:white;
-    margin-top:60px;
-    margin-left: 500px;
+    margin:60px auto;
 }
 
 button {
