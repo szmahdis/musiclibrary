@@ -1,12 +1,21 @@
+:root {
+    --background-color:#131417;
+    --primary-color: #ffdd40;
+    --secondary-color:#1f2229;
+    --text-color:whitesmoke;
+    --play-button-color: #f5f5f5;
+
+}
+
 body {
-    background: #131417;
+    background: var(--background-color);
 }
 
 .header{
-    color:whitesmoke;
+    color:var(--text-color);
 }
 .header:hover{
-    color:#ffdd40;
+    color:var(--primary-color);
 }
 
 .list-container .row {
@@ -30,30 +39,30 @@ body {
 	width:60px;
 	height:60px;
 	padding-left: 10px;
-	border: 6px solid #fff;
+	border: 6px solid var(--play-button-color);
 	border-radius: 50%;
-	color:#f5f5f5;
+	color: var(--play-button-color);
 	text-align:center;
 	text-decoration:none;
-	background-color: rgba(0,0,0,0.5);
+	background-color: var(--secondary-color);
 	font-size:13px;
 	transition: all 0.3s ease;
 }
 .list-container .row button:hover {
-	background-color: rgba(0,0,0,0.8);
-	box-shadow: 0px 0px 10px #ffdd40;
-	text-shadow: 0px 0px 10px #ffdd40;
+	background-color: var(--secondary-color);
+	box-shadow: 0px 0px 10px var(--primary-color);
+	text-shadow: 0px 0px 10px var(--primary-color);
 }
 
 .list-container .header {
     font-weight: bold;
-    color: white;
-    border-bottom:4px solid #ffdd40;
+    color: var(--text-color);
+    border-bottom:4px solid var(--primary-color);
 }
 
 .list-container .song.row {
-     background: #1f2229;
-     color:white
+     background: var(--secondary-color);
+     color: var(--text-color)
 }
 
 .cover-img {
