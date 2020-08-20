@@ -20,10 +20,11 @@ body {
 
 .list-container .row {
     display: grid;
-    grid-template-columns: 100px 100px 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px 100px 100px 1350px;
     column-gap: 10px;
     align-items: center;
     justify-items: center;
+    width:fit-content;
 }
 .list-container .row * {
     margin: 5px;
@@ -62,7 +63,7 @@ body {
 
 .list-container .song.row {
      background: var(--secondary-color);
-     color: var(--text-color)
+     color: var(--text-color);
 }
 
 .cover-img {
