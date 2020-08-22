@@ -10,7 +10,18 @@
 	<body>
         <header >
         <button class="home-btn" onclick="window.location.href='/'" ><i class="fas fa-home"></i></button> 
-        </header>
+       
+        <div class=toggle-container>
+            <input type="checkbox" class="checkbox" id="darkModeToggle"> </input>
+            <label class="label" for="darkModeToggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+
+    </header>
+        
         <div class="container">
             <img class=image id="coverAlbum" alt="coverAlbum">
             <p id="songTitle"> ? </p>

@@ -18,3 +18,9 @@ document.getElementById('coverAlbum').setAttribute("src", covers[getSongName()])
 const songTitle = songs[getSongName()];
 document.getElementById('songTitle').textContent = songTitle;
 console.log(songTitle);
+
+// Toggle button
+const toggleButton = document.getElementById('darkModeToggle')
+toggleButton.addEventListener('change', () => {
+    document.body.classList.toggle('light-mode');
+})
