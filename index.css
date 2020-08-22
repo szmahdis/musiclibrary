@@ -11,6 +11,15 @@ body {
     background: var(--background-color);
 }
 
+body.light-mode {
+    --background-color:#FCFCFC;
+    --primary-color:#0077FF;
+    --secondary-color: #EBEBEB;
+    --text-color: #333333;
+    --play-button-color: #0077FF;
+
+}
+
 .header{
     color:var(--text-color);
 }
@@ -70,4 +79,59 @@ body {
     object-fit:cover;
     width: 100%;
     max-height: 100%;
+}
+
+.toggle-container {
+    background-color: var(--background-color);
+    display:flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    margin-top: 20px;
+    /*bayad size container kuchik beshe ya na, age are chejuri containero bezaram chap*/
+    /* width: fit-content;
+    height: fit-content;
+    flex-direction: row-reverse; */
+}
+
+.toggle-container .label{
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    border-radius:50px;
+    /* cursor:pointer; */
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:4px;
+    position: relative;
+    height:20px;
+    width:50px;
+    transform:scale(1)
+}
+
+.toggle-container .label .ball {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top:2.5px;
+    left:4px;
+    height: 22px;
+    width:22px;
+    transition-duration: 0.2s;
+}
+
+.checkbox:checked + .label .ball {
+    transform:translateX(30px);
+}
+
+.toggle-container .checkbox {
+    opacity: 0;
+}
+
+
+.fa-moon {
+    color: var(--primary-color);
+}
+
+.fa-sun {
+    color: var(--primary-color);
 }
