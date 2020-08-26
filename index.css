@@ -35,7 +35,7 @@ body.light-mode {
     column-gap: 10px;
     align-items: center;
     justify-items: center;
-    width:fit-content;
+    /* width:fit-content; */
 }
 .list-container .row * {
     margin: 5px;
