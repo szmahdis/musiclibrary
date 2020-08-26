@@ -32,6 +32,7 @@ header {
     width:550px;
     height:550px;
     background: var(--secondary-color);
+    font-family: londrina-light;
     font-size: 28px;
     color:var(--text-color);
     margin:60px auto;
@@ -113,4 +114,10 @@ button:hover {
 
 .fa-sun {
     color: var(--primary-color);
+}
+
+@font-face {
+    font-family: londrina-light;
+    src: url(font/LondrinaSolid-Light.ttf);
+    font-style:normal;
 }

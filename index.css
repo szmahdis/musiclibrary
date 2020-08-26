@@ -22,6 +22,8 @@ body.light-mode {
 
 .header{
     color:var(--text-color);
+    font-family: londrina-black;
+    /* font-weight: 300; */
 }
 .header:hover{
     color:var(--primary-color);
@@ -54,7 +56,7 @@ body.light-mode {
 	color: var(--play-button-color);
 	text-align:center;
 	text-decoration:none;
-	background-color: var(--secondary-color);
+    background-color: var(--secondary-color);
 	font-size:13px;
 	transition: all 0.3s ease;
 }
@@ -65,7 +67,7 @@ body.light-mode {
 }
 
 .list-container .header {
-    font-weight: bold;
+    font-family: londrina-black;
     color: var(--text-color);
     border-bottom:4px solid var(--primary-color);
 }
@@ -73,6 +75,7 @@ body.light-mode {
 .list-container .song.row {
      background: var(--secondary-color);
      color: var(--text-color);
+     font-family: londrina-thin;
 }
 
 .cover-img {
@@ -134,4 +137,17 @@ body.light-mode {
 
 .fa-sun {
     color: var(--primary-color);
+}
+
+@font-face {
+    font-family: 'londrina-black';
+    src: url(font/LondrinaSolid-Black.ttf);
+    font-style: normal;
+    /* font-weight: 300; */
+}
+
+@font-face {
+    font-family: 'londrina-thin';
+    src: url(font/LondrinaSolid-Thin.ttf);
+    font-style: normal;
 }
