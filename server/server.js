@@ -40,10 +40,19 @@ app.get('/images/:filename', (req, res) => {
 
     fs.readFile(`./images/${fileName}`, (err, data) => {
         if (err) throw err;
-        console.log(data);
         res.send(data);
       });
     
+      /**
+       * getImage(filename).then((data) => {
+       *  // kari ke ba data mishe anjam dad
+       * res.send(data)
+       * }).catch((err) => {
+       * error mide
+       * res.send('ERROR')
+       * })
+       * 
+       * /
 })
 
 
