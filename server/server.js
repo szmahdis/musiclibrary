@@ -4,6 +4,7 @@ const app = express()
 const port = 3000
 const songs = [
     {
+        //add id for song
         artist: "Paramore",
         title: "Aint It Fun",
         album: "Paramore",
@@ -43,16 +44,16 @@ app.get('/images/:filename', (req, res) => {
         res.send(data);
       });
     
-      /**
-       * getImage(filename).then((data) => {
-       *  // kari ke ba data mishe anjam dad
-       * res.send(data)
-       * }).catch((err) => {
-       * error mide
-       * res.send('ERROR')
-       * })
-       * 
-       * /
+    //   /**
+    //    * getImage(filename).then((data) => {
+    //    *  // kari ke ba data mishe anjam dad
+    //    * res.send(data)
+    //    * }).catch((err) => {
+    //    * error mide
+    //    * res.send('ERROR')
+    //    * })
+    //    * 
+    //    * /
 })
 
 
