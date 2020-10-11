@@ -12,7 +12,6 @@ fetch('http://localhost:3000/songs')
         (response) => {
             response.json().then((jsonResponse) => {
                 const songItems = jsonResponse
-                console.log(`./images/${songItems[0].cover}`)
                 let counter = 0;
                 for (item of songItems) {
                     const div = document.createElement('div');
@@ -21,8 +20,8 @@ fetch('http://localhost:3000/songs')
                     const button = document.createElement('button')
                     button.setAttribute('class', 'play-button')
                     button.setAttribute('data-song', 'aint-it-fun')
-                    // send the id to song.js for loading the song title and artist on page
-                    const reference = `./song.html?song=${songItems[counter].title}`
+                    const reference = `./song.html?songId=${songItems[counter].id}`
+
                     button.onclick = () => {
                         window.location.href = reference;
                     }
@@ -33,7 +32,7 @@ fetch('http://localhost:3000/songs')
                     const image = document.createElement('img')
                     image.setAttribute('class', 'cover-img')
                     image.setAttribute('src', `http://localhost:3000/images/${songItems[counter].cover}`)
-                    image.setAttribute('alt', 'paramore')
+                    image.setAttribute('alt', 'img')
 
                     const title = document.createElement('span')
                     title.append(songItems[counter].title)

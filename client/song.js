@@ -1,26 +1,30 @@
-const songs = { //dictonary 
-    'aint-it-fun': 'Paramore - Ain\'t It Fun',
-    'dog-days-are-over': 'Florence + The Machine - Dog Days Are Over',
-    'wasting-my-young-years': 'London Grammar - Wasting My Young Years'
-};
-const covers = {
-    // 'aint-it-fun': require('/images/paramore.jpg'),
-    // 'dog-days-are-over': require('/images/florence_and_the_machine.jpg'),
-    // 'wasting-my-young-years': require('/images/london_grammar.jpg')
-}
-getSongName = () => {
-    const url= window.location.href
-    const song = url.split('?')
-    const songName = song[1].split('=')[1]
-    return songName;
-};
-document.getElementById('coverAlbum').setAttribute("src", covers[getSongName()]);
-const songTitle = songs[getSongName()];
-document.getElementById('songTitle').textContent = songTitle;
-console.log(songTitle);
 
 // Toggle button
 const toggleButton = document.getElementById('darkModeToggle')
 toggleButton.addEventListener('change', () => {
     document.body.classList.toggle('light-mode');
 })
+
+getSongName = () => {
+    const url= window.location.href
+    const song = url.split('?')
+    const songName = song[1].split('=')[1]
+    console.log(songName)
+    return songName;
+};
+
+fetch('http://localhost:3000/songs')
+ .then(
+     (response) => {
+         response.json().then((jsonResponse) => {
+             for (item of jsonResponse) {
+                 const songId = getSongName()
+                 if(item.id === songId) {
+                    document.getElementById('coverAlbum').setAttribute("src", `http://localhost:3000/images/${item.cover}`)
+                    document.getElementById('artistName').textContent = item.artist;
+                    document.getElementById('songTitle').textContent = item.title;
+                 }
+             }
+         })
+     }
+ )

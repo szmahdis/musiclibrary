@@ -28,7 +28,7 @@ header {
     justify-content: center;
     align-content: center;
     justify-items: center;
-    row-gap: 5px;
+    row-gap: 3px;
     width:550px;
     height:550px;
     background: var(--secondary-color);
@@ -36,6 +36,24 @@ header {
     font-size: 28px;
     color:var(--text-color);
     margin:60px auto;
+}
+
+.textContainer {
+    display: grid;
+    justify-content:center;
+    align-content: center;
+    justify-items: center;
+    width: 300px;
+    height: 150px;
+}
+
+p {
+    margin:10px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
 }
 
 button {
