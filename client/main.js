@@ -1,8 +1,16 @@
 // Toggle button
 const toggleButton = document.getElementById('darkmode-toggle')
+
 toggleButton.addEventListener('change', () => {
     document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light-mode' : 'dark');
+
 })
+
+if (localStorage.getItem('theme') === 'light-mode') {
+    document.body.classList.toggle('light-mode');
+    toggleButton.checked = true;
+}
 
 //dynamic rendering
 const container = document.getElementsByClassName('list-container')

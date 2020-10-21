@@ -4,7 +4,14 @@ const fs = require('fs')
 const toggleButton = document.getElementById('darkModeToggle')
 toggleButton.addEventListener('change', () => {
     document.body.classList.toggle('light-mode');
+    localStorage.setItem('theme', document.body.classList.contains('light-mode') ? 'light-mode' : 'dark');
 })
+
+
+if (localStorage.getItem('theme') === 'light-mode') {
+    document.body.classList.toggle('light-mode');
+    toggleButton.checked = true;
+}
 
 getSongId = () => {
     const url= window.location.href
