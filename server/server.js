@@ -2,6 +2,7 @@ const express = require('express')
 const fs = require('fs')
 const app = express()
 const port = 3000
+const path = require('path')
 const songs = [
     {
         id: "s0000",
@@ -58,6 +59,13 @@ app.get('/images/:filename', (req, res) => {
     //    * 
     //    * /
 })
+
+app.get('/audio/:trackId', (req,res) => {
+    const trackId = req.params.trackId
+    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.sendFile(path.resolve(`server/audio/${trackId}.mp3`))
+})
+
 
 
 app.listen(port, () => {

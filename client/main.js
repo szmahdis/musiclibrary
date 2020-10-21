@@ -7,7 +7,7 @@ toggleButton.addEventListener('change', () => {
 //dynamic rendering
 const container = document.getElementsByClassName('list-container')
 
-fetch('https://musiclibrary-server.herokuapp.com/songs')
+fetch('http://localhost:3000/songs')
     .then(
         (response) => {
             response.json().then((jsonResponse) => {
@@ -21,28 +21,11 @@ fetch('https://musiclibrary-server.herokuapp.com/songs')
                     button.setAttribute('class', 'play-button')
                     button.setAttribute('data-song', 'aint-it-fun')
                     const reference = `./song.html?songId=${songItems[counter].id}`
-                    // const fetchURL = `http://localhost:3000/audio/${songItems[counter].id}.mp3`
 
                     button.onclick = () => {
                            
                         window.location.href = reference;
-                        // fetch(fetchURL)
-                        // .then(
-                        //     (response) => {
-                        //         console.log(response)
-                        //         response.body.getReader().read().then(
-                        //             ({done, value}) => {
-                        //                 if (done === true) {
-                        //                     console.log(done)
-                        //                     var audio = new Audio(value.toString());
-                        //                     audio.load();
-                        //                     audio.play();
-                                            
-                        //                 }
-                        //             }
-                        //         )
-                        //     }
-                        //  )             
+                      
                     }
                     const i = document.createElement('i')
                     button.appendChild(i)
@@ -50,7 +33,7 @@ fetch('https://musiclibrary-server.herokuapp.com/songs')
 
                     const image = document.createElement('img')
                     image.setAttribute('class', 'cover-img')
-                    image.setAttribute('src', `https://musiclibrary-server.herokuapp.com/images/${songItems[counter].cover}`)
+                    image.setAttribute('src', `http://localhost:3000/images/${songItems[counter].cover}`)
                     image.setAttribute('alt', 'img')
 
                     const title = document.createElement('span')
