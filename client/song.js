@@ -21,14 +21,14 @@ getSongId = () => {
     return songId;
 };
 
-fetch('http://localhost:3000/songs')
+fetch('https://musiclibrary-server.herokuapp.com/songs')
  .then(
      (response) => {
          response.json().then((jsonResponse) => {
              for (item of jsonResponse) {
                  const songId = getSongId()
                  if(item.id === songId) {
-                    document.getElementById('coverAlbum').setAttribute("src", `http://localhost:3000/images/${item.cover}`)
+                    document.getElementById('coverAlbum').setAttribute("src", `https://musiclibrary-server.herokuapp.com/images/${item.cover}`)
                     document.getElementById('artistName').textContent = item.artist;
                     document.getElementById('songTitle').textContent = item.title;
                  }
@@ -40,7 +40,7 @@ fetch('http://localhost:3000/songs')
  const playBtn = document.getElementById('play-btn')
  playBtn.onclick = () => {
     const songId = getSongId()
-     fetch(`http://localhost:3000/audio/${songId}`).then(
+     fetch(`https://musiclibrary-server.herokuapp.com/audio/${songId}`).then(
          (response) => {
            audioObj = new Audio(response.url)
            audioObj.play()

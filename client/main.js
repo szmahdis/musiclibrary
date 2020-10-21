@@ -15,7 +15,7 @@ if (localStorage.getItem('theme') === 'light-mode') {
 //dynamic rendering
 const container = document.getElementsByClassName('list-container')
 
-fetch('http://localhost:3000/songs')
+fetch('https://musiclibrary-server.herokuapp.com/songs')
     .then(
         (response) => {
             response.json().then((jsonResponse) => {
@@ -41,7 +41,7 @@ fetch('http://localhost:3000/songs')
 
                     const image = document.createElement('img')
                     image.setAttribute('class', 'cover-img')
-                    image.setAttribute('src', `http://localhost:3000/images/${songItems[counter].cover}`)
+                    image.setAttribute('src', `https://musiclibrary-server.herokuapp.com/images/${songItems[counter].cover}`)
                     image.setAttribute('alt', 'img')
 
                     const title = document.createElement('span')
