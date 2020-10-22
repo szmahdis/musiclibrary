@@ -38,17 +38,25 @@ fetch('https://musiclibrary-server.herokuapp.com/songs')
  )
 
  const playBtn = document.getElementById('play-btn')
+ let audioObj = undefined
  playBtn.onclick = () => {
-    const songId = getSongId()
-     fetch(`https://musiclibrary-server.herokuapp.com/audio/${songId}`).then(
-         (response) => {
-           audioObj = new Audio(response.url)
-           audioObj.play()
-        }
-     )
+     if (audioObj) {
+         audioObj.play();
+     } else {
+        const songId = getSongId()
+        fetch(`https://musiclibrary-server.herokuapp.com/audio/${songId}`).then(
+            (response) => {
+                audioObj = new Audio(response.url)
+                audioObj.play();
+            }
+        )
+         
+     }
  }
 
  const pauseBtn = document.getElementById('pause-btn')
  pauseBtn.onclick = () => {
-     audioObj.pause()
+     if (audioObj) {
+         audioObj.pause()
+     }
  }
