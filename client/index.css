@@ -90,10 +90,6 @@ body.light-mode {
     justify-content: flex-end;
     align-content: flex-end;
     margin-top: 20px;
-    /*bayad size container kuchik beshe ya na, age are chejuri containero bezaram chap*/
-    /* width: fit-content;
-    height: fit-content;
-    flex-direction: row-reverse; */
 }
 
 .toggle-container .label{
