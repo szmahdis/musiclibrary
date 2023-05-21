@@ -1,0 +1,24 @@
+{
+  "name": "musiclibrary",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "parcel ./client/*.html",
+    "build": "parcel build ./client/*.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/szmahdis/musiclibrary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/szmahdis/musiclibrary/issues"
+  },
+  "homepage": "https://github.com/szmahdis/musiclibrary#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "parcel-bundler": "^1.12.4"
+  }
+}

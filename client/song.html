@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>My Music Library</title>
+		<link rel="stylesheet" href="song.css">
+        <link rel="stylesheet" href="./font-awesome/css/all.min.css">
+	</head>
+
+	<body>
+        <header >
+        <button class="home-btn" onclick="window.location.href='/'" ><i class="fas fa-home"></i></button> 
+       
+        <div class=toggle-container>
+            <input type="checkbox" class="checkbox" id="darkModeToggle"> </input>
+            <label class="label" for="darkModeToggle">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+
+    </header>
+        
+        <div class="container">
+            <img class=image id="coverAlbum" alt="coverAlbum">
+            <div class="textContainer">
+                <p id="songTitle"> songTitle </p>
+                <p id="artistName"> artistName </p>
+            </div>
+            <div class="action-bar">
+            <button class="fav-btn"><i class="fas fa-heart"></i></button>
+            <button class="back-btn"><i class="fas fa-backward"></i></button>
+            <button class="play-btn" id="play-btn"><i class="fas fa-play"></i></button>
+            <button class="pause-btn" id="pause-btn"><i class="fas fa-pause"></i></i></button>
+            <button class="forward-btn"><i class="fas fa-forward"></i></button>
+            </div>
+        </div>
+     <script src="./song.js"></script>
+	</body>
+</html>

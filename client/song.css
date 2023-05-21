@@ -1,0 +1,141 @@
+:root {
+    --background-color:#131417;
+    --primary-color: #ffdd40;
+    --secondary-color:#1f2229;
+    --text-color:whitesmoke;
+    --play-button-color: #f5f5f5;
+
+}
+
+body {
+    background: var(--background-color);
+}
+
+body.light-mode {
+    --background-color:#FCFCFC;
+    --primary-color:#0077FF;
+    --secondary-color: #EBEBEB;
+    --text-color: #333333;
+    --play-button-color: #0077FF;
+
+}
+header {
+    display:flex;  
+    justify-content: space-between;
+}
+.container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    row-gap: 3px;
+    width:550px;
+    height:550px;
+    background: var(--secondary-color);
+    font-family: londrina-light;
+    font-size: 28px;
+    color:var(--text-color);
+    margin:60px auto;
+}
+
+.textContainer {
+    display: grid;
+    justify-content:center;
+    align-content: center;
+    justify-items: center;
+    width: 300px;
+    height: 150px;
+}
+
+p {
+    margin:10px;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+button {
+    width:60px;
+	height:60px;
+    padding-left: 6px;
+    padding-top: 4px;
+	border: 6px solid var(--play-button-color);
+	border-radius: 50%;
+	color: var(--play-button-color);
+	text-align:center;
+	text-decoration:none;
+	background-color: var(--background-color);
+	font-size:18px;
+	transition: all 0.3s ease;
+}
+
+button:hover {
+	background-color:var(--background-color);
+	box-shadow: 0px 0px 10px var(--primary-color);
+	text-shadow: 0px 0px 10px var(--primary-color);
+}
+
+.container .action-bar {
+    border-style: outset;
+    padding: 10px 10px 10px 10px;
+    border-color:  var(--primary-color) ;
+}
+
+.toggle-container {
+    background-color: var(--background-color);
+    display:flex;
+    justify-content: flex-end;
+    align-content: flex-end;
+    margin-top: 12px;
+}
+
+.toggle-container .label{
+    background-color: var(--background-color);
+    border: 1px solid var(--primary-color);
+    border-radius:50px;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+    padding:4px;
+    position: relative;
+    height:20px;
+    width:50px;
+    transform:scale(1)
+}
+
+.toggle-container .label .ball {
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    position: absolute;
+    top:2.5px;
+    left:4px;
+    height: 22px;
+    width:22px;
+    transition-duration: 1s;
+}
+
+.checkbox:checked + .label .ball {
+    transform:translateX(30px);
+}
+
+.toggle-container .checkbox {
+    opacity: 0;
+}
+
+
+.fa-moon {
+    color: var(--primary-color);
+}
+
+.fa-sun {
+    color: var(--primary-color);
+}
+
+@font-face {
+    font-family: londrina-light;
+    src: url(font/LondrinaSolid-Light.ttf);
+    font-style:normal;
+}
